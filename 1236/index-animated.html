@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Garcia - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimHei, Arial, Helvetica, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #0a0a0a;
+            padding-bottom: 73px;
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: space-between;
+            padding: 24px 60px;
+            min-width: 100%;
+            height: 96px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .autoWrapper {
+            position: relative;
+            width: 146px;
+            height: 48px;
+        }
+
+        .robertGarcia {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 146px;
+            height: 48px;
+            line-height: 48px;
+            letter-spacing: -0.32px;
+            color: #c7c7c7;
+            font-family: "Bebas Neue", "Arial Black", "Helvetica Neue", sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .column {
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            column-gap: 32px;
+            overflow: hidden;
+        }
+
+        .navLink {
+            flex-shrink: 0;
+            line-height: 24px;
+            letter-spacing: -0.48px;
+            color: #c7c7c7;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .navLink:hover {
+            color: #d3e97a;
+            transform: translateY(-2px);
+        }
+
+        .autoWrapper2 {
+            display: flex;
+            align-items: flex-start;
+            align-self: stretch;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-right: 108px;
+            padding-left: 108px;
+        }
+
+        .heroContent {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 160px;
+            padding-bottom: 22px;
+            row-gap: 40px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .headerAndSubHeader {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 8px;
+        }
+
+        .hiIAmRobertGarcia {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 544px;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            font-family: "Bebas Neue", "Arial Black", "Impact", "Helvetica Neue", sans-serif;
+            font-size: 101px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .aSydneyBasedFrontEnd {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 544px;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .action {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            align-self: stretch;
+            column-gap: 16px;
+            margin-right: 217px;
+        }
+
+        .button {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            column-gap: 12px;
+            border-radius: 100px;
+            background: #d3e97a;
+            padding: 20px 6px 20px 24px;
+            height: 54px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(211, 233, 122, 0.2);
+        }
+
+        .title {
+            flex-shrink: 0;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #0a0a0a;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: UPPERCASE;
+        }
+
+        .circle {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        .dot {
+            border-radius: 50%;
+            background: #0a0a0a;
+            width: 10px;
+            height: 10px;
+        }
+
+        .frame3 {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            border-radius: 100px;
+            background: #222222;
+            width: 54px;
+            height: 54px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .frame3:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(211, 233, 122, 0.2);
+        }
+
+        .bg {
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            background: #c7c7c7;
+            padding-top: 1px;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .potrait {
+            width: 600px;
+            height: 699px;
+        }
+
+        .line4 {
+            margin-top: 80px;
+            background: #484848;
+            width: 100%;
+            height: 1px;
+        }
+
+        .frame22 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            margin: -1px 108px 0px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            row-gap: 80px;
+        }
+
+        .frame21 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            margin-right: 624px;
+            row-gap: 8px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .featuredProjects {
+            flex-shrink: 0;
+            line-height: 76px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: "Bebas Neue", "Arial Black", "Helvetica Neue", sans-serif;
+            font-size: 76px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .hereAreSomeOfTheSele {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 600px;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .projects {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 120px;
+        }
+
+        .project {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            column-gap: 48px;
+            width: 1224px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            border-radius: 12px;
+            background: #1a1a1a;
+            padding: 16px 57px 127px 16px;
+            overflow: hidden;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            column-gap: 10px;
+            margin-right: 382px;
+            border-radius: 100px;
+            background: #0a0a0a;
+            padding: 8px 16px;
+        }
+
+        .conceptualWork {
+            flex-shrink: 0;
+            line-height: 21px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .work {
+            margin-top: 73px;
+            margin-left: 41px;
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: #000000;
+            border-radius: 12px;
+            width: 486px;
+            height: 347px;
+            background-image: url(.figma/image/mn4f6hg8-hqgs1ti.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .projectContent {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            row-gap: 48px;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 32px;
+        }
+
+        .titleAndDescription {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 16px;
+        }
+
+        .title2 {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 576px;
+            line-height: 45px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .description {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 576px;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .projectInfo {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 16px;
+        }
+
+        .title3 {
+            flex-shrink: 0;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: UPPERCASE;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-end;
+            align-self: stretch;
+            justify-content: center;
+            border-width: 0px 0px 1px;
+            border-style: solid;
+            border-color: #484848;
+        }
+
+        .year {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            align-self: stretch;
+            justify-content: space-between;
+            border-width: 1px 0px 0px;
+            border-style: solid;
+            border-color: #484848;
+            padding-top: 15px;
+            padding-bottom: 16px;
+        }
+
+        .topic {
+            flex-shrink: 0;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .value {
+            flex-shrink: 0;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .frame24 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 24px;
+            margin-right: 292px;
+        }
+
+        .viewProject {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            row-gap: 4px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .viewProject:hover {
+            transform: translateX(8px);
+            color: #d3e97a;
+        }
+
+        .viewProject:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        .titleAndArrow {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 4px;
+        }
+
+        .title4 {
+            flex-shrink: 0;
+            line-height: 24px;
+            letter-spacing: 0;
+            color: #d3e97a;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: UPPERCASE;
+        }
+
+        .arrow {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .underline {
+            flex-shrink: 0;
+            align-self: stretch;
+            background: #d3e97a;
+            height: 2px;
+        }
+
+        .viewProject2 {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            row-gap: 4px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .viewProject2:hover {
+            transform: translateX(8px);
+            color: #d3e97a;
+        }
+
+        .titleAndArrow2 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 4px;
+        }
+
+        .bxlLinkedinSvg {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            overflow: hidden;
+        }
+
+        .project2 {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            column-gap: 48px;
+            width: 1224px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .projectImage {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            border-radius: 12px;
+            background: #1a1a1a;
+            padding: 127px 56px 126px;
+            overflow: hidden;
+        }
+
+        .image10 {
+            border-radius: 12px;
+            width: 488px;
+            height: 347px;
+        }
+
+        .projectContent2 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            row-gap: 48px;
+        }
+
+        .information2 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 32px;
+        }
+
+        .titleAndDescription2 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 16px;
+        }
+
+        .title5 {
+            flex-shrink: 0;
+            align-self: stretch;
+            line-height: 45px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .viewProject3 {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            margin-right: 433px;
+            row-gap: 4px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .viewProject3:hover {
+            transform: translateX(8px);
+            color: #d3e97a;
+        }
+
+        .project3 {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            column-gap: 48px;
+            width: 1224px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .projectImage2 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            border-radius: 12px;
+            background: #1a1a1a;
+            padding: 16px 56px 147px 16px;
+            overflow: hidden;
+        }
+
+        .frame15 {
+            display: inline-flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            column-gap: 10px;
+            margin-right: 429px;
+            border-radius: 100px;
+            background: #0a0a0a;
+            padding: 8px 16px;
+        }
+
+        .image9 {
+            margin-top: 94px;
+            margin-left: 40px;
+            border-radius: 12px;
+            width: 488px;
+            height: 306px;
+        }
+
+        .projectContent3 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            row-gap: 48px;
+        }
+
+        .line5 {
+            background: #484848;
+            width: 100%;
+            height: 1px;
+        }
+
+        .autoWrapper3 {
+            display: flex;
+            align-items: flex-start;
+            align-self: stretch;
+            justify-content: space-between;
+            margin-top: 121px;
+            padding-right: 108px;
+            padding-left: 108px;
+        }
+
+        .aboutMe {
+            line-height: 91px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: "Bebas Neue", "Arial Black", "Helvetica Neue", sans-serif;
+            font-size: 101px;
+            font-weight: 400;
+            text-transform: uppercase;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .frame26 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 16px;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .iAmAFrontEndDevelope {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 704px;
+            line-height: 45px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .iAmAFrontEndDevelope2 {
+            flex-shrink: 0;
+            align-self: stretch;
+            width: 704px;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .viewProject4 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            margin: 53px 683px 0px 628px;
+            row-gap: 4px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .line6 {
+            margin-top: 130px;
+            background: #484848;
+            width: 100%;
+            height: 1px;
+        }
+
+        .frame11 {
+            display: flex;
+            align-items: flex-start;
+            column-gap: 24px;
+            margin-top: 65px;
+            margin-left: 108px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            width: 1224px;
+        }
+
+        .frame12 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            align-self: stretch;
+            justify-content: space-between;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .frame10 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 40px;
+        }
+
+        .frame14 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 16px;
+        }
+
+        .letSConnect {
+            flex-shrink: 0;
+            width: 600px;
+            line-height: 76px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: "Bebas Neue", "Arial Black", "Helvetica Neue", sans-serif;
+            font-size: 76px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .frame18 {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            margin-right: 298px;
+            row-gap: 8px;
+        }
+
+        .description2 {
+            flex-shrink: 0;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #c7c7c7;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .frame19 {
+            display: inline-flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+        }
+
+        .mail {
+            flex-shrink: 0;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .underline2 {
+            flex-shrink: 0;
+            align-self: stretch;
+            background: #d3e97a;
+            height: 1px;
+        }
+
+        .frame17 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 3px;
+        }
+
+        .frame16 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 3px;
+            margin-right: 42px;
+        }
+
+        .frame13 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 24px;
+            margin-right: 400px;
+        }
+
+        .bxlLinkedinSvg2 {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .bxlLinkedinSvg2:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(211, 233, 122, 0.3);
+        }
+
+        .frame8 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            row-gap: 40px;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .frame6 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 24px;
+        }
+
+        .frame4 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 8px;
+        }
+
+        .frame5 {
+            display: flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 10px;
+            border-radius: 4px;
+            background: transparent;
+            padding: 0;
+            border: 1px solid #333;
+        }
+
+        .johnDoe {
+            flex-shrink: 0;
+            line-height: 27px;
+            letter-spacing: 0;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .johnDoe input, .johnDoe textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .johnDoe input::placeholder, .johnDoe textarea::placeholder {
+            color: #666;
+        }
+
+        .frame7 {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            row-gap: 8px;
+        }
+
+        .frame52 {
+            display: flex;
+            flex-shrink: 0;
+            align-items: flex-start;
+            align-self: stretch;
+            column-gap: 10px;
+            border-radius: 4px;
+            background: transparent;
+            padding: 0;
+            border: 1px solid #333;
+        }
+
+        .text, .text input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-family: Manrope, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            outline: none;
+            height: 54px;
+        }
+
+        .text::placeholder, .text input::placeholder {
+            color: #666;
+        }
+
+        .text textarea {
+            resize: vertical;
+            min-height: 200px;
+        }
+
+        .button2 {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            column-gap: 16px;
+            margin-right: 460px;
+            margin-top: 30px;
+            border-radius: 100px;
+            background: #d3e97a;
+            padding: 20px 40px;
+            height: 54px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button2:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(211, 233, 122, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hiIAmRobertGarcia {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            
+            .featuredProjects {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            
+            .letSConnect {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            
+            .aboutMe {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            
+            .autoWrapper2 {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .heroContent {
+                margin-top: 80px;
+            }
+            
+            .project, .project2, .project3 {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .frame11 {
+                flex-direction: column;
+                margin: 20px;
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="navigation">
+            <div class="autoWrapper">
+                <p class="robertGarcia">robert garcia</p>
+                <p class="robertGarcia">robert garcia</p>
+            </div>
+            <div class="column">
+                <p class="navLink">Work</p>
+                <p class="navLink">About</p>
+                <p class="navLink">Contact</p>
+                <p class="navLink">Work</p>
+                <p class="navLink">About</p>
+                <p class="navLink">Contact</p>
+            </div>
+        </div>
+        <div class="autoWrapper2">
+            <div class="heroContent">
+                <div class="headerAndSubHeader">
+                    <p class="hiIAmRobertGarcia">
+                        hi, i am <br />
+                        robert garcia.
+                    </p>
+                    <p class="aSydneyBasedFrontEnd">
+                        A Sydney based front-end developer passionate about building
+                        accessible and user friendly websites.
+                    </p>
+                </div>
+                <div class="action">
+                    <a href="#contact" class="button" onclick="smoothScroll('contact'); return false;">
+                        <p class="title">Contact Me</p>
+                        <div class="circle">
+                            <div class="dot"></div>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="frame3">
+                        <img src=".figma/image/mn4f6hg3-c53ddxc.svg" class="bxlLinkedinSvg" alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com" target="_blank" class="frame3">
+                        <img src=".figma/image/mn4f6hg3-aud1943.svg" class="bxlLinkedinSvg" alt="GitHub" />
+                    </a>
+                </div>
+            </div>
+            <div class="bg">
+                <img src=".figma/image/mn4f6hg8-i7n4lel.png" class="potrait" alt="Portrait" />
+            </div>
+        </div>
+        <div class="line4"></div>
+        <div class="frame22">
+            <div class="frame21">
+                <p class="featuredProjects">Featured Projects</p>
+                <p class="hereAreSomeOfTheSele">
+                    Here are some of the selected projects that showcase my passion for
+                    front-end development.
+                </p>
+            </div>
+            <div class="projects">
+                <div class="project">
+                    <div class="card">
+                        <div class="tag">
+                            <p class="conceptualWork">Conceptual Work</p>
+                        </div>
+                        <div class="work"></div>
+                    </div>
+                    <div class="projectContent">
+                        <div class="information">
+                            <div class="titleAndDescription">
+                                <p class="title2">
+                                    Promotional landing page for our favorite show
+                                </p>
+                                <p class="description">
+                                    Teamed up with a designer to breathe life into a promotional
+                                    webpage for our beloved show, Adventure Time. Delivered a fully
+                                    responsive design with dynamic content capabilities, seamlessly
+                                    integrating a newsletter feature to keep fans updated with the
+                                    latest adventures.
+                                </p>
+                            </div>
+                            <div class="projectInfo">
+                                <p class="title3">Project Info</p>
+                                <div class="list">
+                                    <div class="year">
+                                        <p class="topic">Year</p>
+                                        <p class="value">2023</p>
+                                    </div>
+                                    <div class="year">
+                                        <p class="topic">Role</p>
+                                        <p class="value">Front-end Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame24">
+                            <a href="https://demo.example.com" target="_blank" class="viewProject">
+                                <div class="titleAndArrow">
+                                    <p class="title4">Live Demo</p>
+                                    <img src=".figma/image/mn4f6hg3-mu0wwuq.svg" class="arrow" alt="Arrow" />
+                                </div>
+                                <div class="underline"></div>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="viewProject2">
+                                <div class="titleAndArrow2">
+                                    <p class="title4">See on Github</p>
+                                    <img src=".figma/image/mn4f6hg3-gedp9xi.svg" class="bxlLinkedinSvg" alt="GitHub" />
+                                </div>
+                                <div class="underline"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project2">
+                    <div class="projectImage">
+                        <img src=".figma/image/mn4f6hg8-00eed4m.png" class="image10" alt="Project" />
+                    </div>
+                    <div class="projectContent2">
+                        <div class="information2">
+                            <div class="titleAndDescription2">
+                                <p class="title5">Blog site for World News</p>
+                                <p class="description">
+                                    Mastered CSS Grid complexities in building an innovative news
+                                    homepage, navigating intricate design decisions for a seamless
+                                    user experience. Leveraged the challenge to enhance skills
+                                    in&nbsp;&nbsp;front-end development.
+                                </p>
+                            </div>
+                            <div class="projectInfo">
+                                <p class="title3">Project Info</p>
+                                <div class="list">
+                                    <div class="year">
+                                        <p class="topic">Client</p>
+                                        <p class="value">World News</p>
+                                    </div>
+                                    <div class="year">
+                                        <p class="topic">Year</p>
+                                        <p class="value">2022</p>
+                                    </div>
+                                    <div class="year">
+                                        <p class="topic">Role</p>
+                                        <p class="value">Front-end Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://news.example.com" target="_blank" class="viewProject3">
+                            <div class="titleAndArrow">
+                                <p class="title4">View project</p>
+                                <img src=".figma/image/mn4f6hg3-6ezkk6x.svg" class="arrow" alt="Arrow" />
+                            </div>
+                            <div class="underline"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="project3">
+                    <div class="projectImage2">
+                        <div class="frame15">
+                            <p class="conceptualWork">Challenge</p>
+                        </div>
+                        <img src=".figma/image/mn4f6hg8-t6uox25.png" class="image9" alt="Project" />
+                    </div>
+                    <div class="projectContent3">
+                        <div class="information2">
+                            <div class="titleAndDescription2">
+                                <p class="title5">E-commerce product page</p>
+                                <p class="description">
+                                    Successfully crafted an engaging product page featuring a
+                                    dynamic lightbox gallery and seamless cart functionality,
+                                    showcasing proficiency in JavaScript development.
+                                </p>
+                            </div>
+                            <div class="projectInfo">
+                                <p class="title3">Project Info</p>
+                                <div class="list">
+                                    <div class="year">
+                                        <p class="topic">Year</p>
+                                        <p class="value">2022</p>
+                                    </div>
+                                    <div class="year">
+                                        <p class="topic">Role</p>
+                                        <p class="value">Front-end Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame24">
+                            <a href="https://ecommerce.example.com" target="_blank" class="viewProject">
+                                <div class="titleAndArrow">
+                                    <p class="title4">Live Demo</p>
+                                    <img src=".figma/image/mn4f6hg3-rb0xav8.svg" class="arrow" alt="Arrow" />
+                                </div>
+                                <div class="underline"></div>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="viewProject2">
+                                <div class="titleAndArrow2">
+                                    <p class="title4">See on Github</p>
+                                    <img src=".figma/image/mn4f6hg3-d7wlalv.svg" class="bxlLinkedinSvg" alt="GitHub" />
+                                </div>
+                                <div class="underline"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line5"></div>
+        <div class="autoWrapper3">
+            <p class="aboutMe">About me</p>
+            <div class="frame26">
+                <p class="iAmAFrontEndDevelope">
+                    I am a front-end developer based in Sydney. Has Mechanical Engineering
+                    background.&nbsp;
+                </p>
+                <p class="iAmAFrontEndDevelope2">
+                    I am a front-end developer based in Sydney looking for exciting
+                    opportunities. Has Mechanical Engineering background. Likes to focus on
+                    accessibility when developing. Passionate and curious about solving
+                    problems. Currently, I'm exploring Reactjs, Webflow and a bit of
+                    Designing. While I am not programming, I enjoy playing football,
+                    photography and playing Valorant. Learning more to improve skill.
+                </p>
+            </div>
+        </div>
+        <a href="#about" class="viewProject4" onclick="smoothScroll('about'); return false;">
+            <p class="title4">More about me</p>
+            <div class="underline"></div>
+        </a>
+        <div class="line6"></div>
+        <div id="contact" class="frame11">
+            <div class="frame12">
+                <div class="frame10">
+                    <div class="frame14">
+                        <p class="letSConnect">Let's connect</p>
+                        <div class="frame18">
+                            <div class="frame17">
+                                <p class="description2">Say hello at</p>
+                                <div class="frame19">
+                                    <p class="mail">robertgarcia@gmail.com</p>
+                                    <div class="underline2"></div>
+                                </div>
+                            </div>
+                            <div class="frame16">
+                                <p class="description2">For more info, here's my</p>
+                                <div class="frame19">
+                                    <p class="mail">resume</p>
+                                    <div class="underline2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frame13">
+                        <a href="https://linkedin.com" target="_blank">
+                            <img src=".figma/image/mn4f6hg3-p17v55b.svg" class="bxlLinkedinSvg2" alt="LinkedIn" />
+                        </a>
+                        <a href="https://github.com" target="_blank">
+                            <img src=".figma/image/mn4f6hg3-7jkei5v.svg" class="bxlLinkedinSvg2" alt="GitHub" />
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src=".figma/image/mn4f6hg3-ays26pr.svg" class="bxlLinkedinSvg2" alt="Twitter" />
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src=".figma/image/mn4f6hg3-ndsvsfg.svg" class="bxlLinkedinSvg2" alt="Instagram" />
+                        </a>
+                    </div>
+                </div>
+                <p class="value">© 2023 Robert Garcia</p>
+            </div>
+            <div class="frame8">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="frame6">
+                        <div class="frame4">
+                            <p class="value">Name</p>
+                            <div class="frame5">
+                                <input type="text" name="name" placeholder="Your name" class="text" />
+                            </div>
+                        </div>
+                        <div class="frame4">
+                            <p class="value">Email</p>
+                            <div class="frame5">
+                                <input type="email" name="email" placeholder="Your email" class="text" />
+                            </div>
+                        </div>
+                        <div class="frame4">
+                            <p class="value">Subject</p>
+                            <div class="frame5">
+                                <input type="text" name="subject" placeholder="Subject" class="text" />
+                            </div>
+                        </div>
+                        <div class="frame7">
+                            <p class="value">Message</p>
+                            <div class="frame52">
+                                <textarea name="message" placeholder="Your message" class="text"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="button2">
+                        <p class="title">Submit</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a demo form.');
+        }
+
+        function smoothScroll(targetId) {
+            const element = document.getElementById(targetId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.project, .project2, .project3, .frame21, .viewProject4');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
